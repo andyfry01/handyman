@@ -5,7 +5,61 @@
     font-style: normal;
 }
 
-header {
-    background-color: rgba(76, 112, 175, 1.0);
+@font-face {
+    font-family: 'Open Sans';
+    src: url('./OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
+body {
+    background-color: var(--golor-grey-100);
+    color: var(--color-grey-900);
+    font-family: "Open Sans";
+    font-size: var(--scale-1);
+    padding: var(--size-2);
+    max-width: var(--prose-md);
+    margin: 0 auto;
+}
+
+.svg-logo {
+    background-color: var(--color-blue-700);
+}
+
+.btn-link {
+    width: var(--size-full);
+    border-width: calc(var(--size-px) * 2);
+    border-color: var(--color-grey-900);
+    padding: var(--scale-0);
+    text-align: center;
+    border-style: solid;
+    font-weight: var(--weight-bold);
+    text-decoration: none;
+    font-size: var(--scale-fluid-3);
+    background-color: var(--color-green-500);
+    border-radius: var(--radius-xs);
+    box-sizing: border-box;
+    display: block;
+    color: var(--color-grey-900);
+}
+
+.btn-link:hover {
+    box-shadow: var(--shadow-lg);
+    transition: all 0.2s var(--ease-out-sine);
+    transform: scale(1.01) translateY(calc(var(--size-1) * -1));
+}
+
+.subheading {
+    text-align: center;
+    font-size: var(--scale-2);
+}
+
+main {
+    margin-top: var(--size-20);
+    margin-bottom: var(--size-20);
+}
+
+footer {
+    background-color: var(--color-blue-700);
+    padding: var(--size-4);
+}
