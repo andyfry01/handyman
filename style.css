@@ -39,7 +39,7 @@ body {
     width: var(--size-full);
     border-width: calc(var(--size-px) * 2);
     border-color: var(--color-grey-900);
-    padding-inline: var(--size-3);
+    padding-inline: var(--size-2);
     padding-block: var(--size-2);
     text-align: center;
     border-style: solid;
@@ -107,7 +107,8 @@ figure {
     margin: 0;
     margin-block: var(--scale-4);
 }
-.portrait { 
+
+.portrait {
     max-width: 100%;
     height: auto;
 }
