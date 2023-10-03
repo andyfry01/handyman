@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('./OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+    src: url('./OpenSans-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -26,11 +26,21 @@ body {
     background-color: var(--color-blue-700);
 }
 
+#contact-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-link:nth-child(1){
+    margin-right: var(--size-6);
+}
+
 .btn-link {
     width: var(--size-full);
     border-width: calc(var(--size-px) * 2);
     border-color: var(--color-grey-900);
-    padding: var(--scale-0);
+    padding-inline: var(--size-3);
+    padding-block: var(--size-2);
     text-align: center;
     border-style: solid;
     font-weight: var(--weight-bold);
@@ -39,8 +49,28 @@ body {
     background-color: var(--color-green-500);
     border-radius: var(--radius-xs);
     box-sizing: border-box;
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
     color: var(--color-grey-900);
+
+    container-name: btn-link;
+    container-type: inline-size;
+}
+
+
+.btn-text {
+    grid-column: 1/5;
+    grid-row: 1/2;
+    align-self: center;
+    justify-self: center;
+}
+
+@container btn-link (width < 220px) {
+    .btn-text {
+        grid-column: 2/5;
+        margin-left: var(--size-2);
+    }
 }
 
 .btn-link:hover {
@@ -49,17 +79,51 @@ body {
     transform: scale(1.01) translateY(calc(var(--size-1) * -1));
 }
 
+.btn-icon {
+    height: var(--size-9);
+    width: var(--size-9);
+    grid-column: 1/2;
+    grid-row: 1/2;
+    place-self: center;
+}
+
 .subheading {
     text-align: center;
     font-size: var(--scale-2);
 }
 
 main {
-    margin-top: var(--size-20);
+    margin-top: var(--size-2);
     margin-bottom: var(--size-20);
 }
 
 footer {
     background-color: var(--color-blue-700);
     padding: var(--size-4);
+}
+
+figure {
+    width: 100%;
+    margin: 0;
+    margin-block: var(--scale-4);
+}
+.portrait { 
+    max-width: 100%;
+    height: auto;
+}
+
+.portrait-caption {
+    text-align: center;
+}
+
+li {
+    line-height: var(--line-md);
+}
+
+.spacer-6 {
+    margin-bottom: var(--scale-6);
+}
+
+.spacer-8 {
+    margin-bottom: var(--scale-8);
 }
